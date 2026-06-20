@@ -7,8 +7,8 @@ const details = [
       </svg>
     ),
     title: "Venue",
-    content: "The Lounge Bar & Kitchen, MG Road, Bangalore",
-    sub: "Elegant indoor space with ambient lighting",
+    content: "Grimaldi's North Domain, 11700 Domain Blvd #148, Austin, TX 78758",
+    sub: "",
   },
   {
     icon: (
@@ -17,8 +17,8 @@ const details = [
       </svg>
     ),
     title: "Date & Time",
-    content: "July 15, 2025 — 6:00 PM to 9:30 PM",
-    sub: "Doors open at 5:30 PM",
+    content: "Sunday, August 2 — 6:00 PM to 9:00 PM",
+    sub: "",
   },
   {
     icon: (
@@ -27,8 +27,8 @@ const details = [
       </svg>
     ),
     title: "Parking",
-    content: "Free valet parking available",
-    sub: "Street parking also available nearby",
+    content: "Purple garage @ Domain",
+    sub: "",
   },
   {
     icon: (
@@ -37,19 +37,19 @@ const details = [
       </svg>
     ),
     title: "Dress Code",
-    content: "Smart Casual",
-    sub: "Look your best — first impressions matter!",
+    content: "Look your best!",
+    sub: "",
   },
 ];
 
 const schedule = [
-  { time: "5:30 PM", event: "Doors Open & Welcome Drinks" },
-  { time: "6:00 PM", event: "Introduction & Ice Breakers" },
-  { time: "6:30 PM", event: "Speed Dating Rounds Begin" },
+  { time: "6:00 PM", event: "Doors Open & Welcome Drinks" },
+  { time: "6:20 PM", event: "Introduction & Ice Breakers" },
+  { time: "6:45 PM", event: "Speed Dating Rounds Begin" },
   { time: "7:45 PM", event: "Networking Break & Refreshments" },
   { time: "8:15 PM", event: "Final Rounds & Fun Activities" },
-  { time: "9:00 PM", event: "Match Selection & Wrap Up" },
-  { time: "9:30 PM", event: "Event Ends" },
+  { time: "8:45 PM", event: "Match Selection & Wrap Up" },
+  { time: "9:00 PM", event: "Event Ends" },
 ];
 
 const ageGroups = [
@@ -83,7 +83,7 @@ export default function EventDetails() {
               <div>
                 <h3 className="font-semibold text-gray-900">{item.title}</h3>
                 <p className="text-gray-700">{item.content}</p>
-                <p className="text-sm text-gray-500 mt-1">{item.sub}</p>
+                {item.sub && <p className="text-sm text-gray-500 mt-1">{item.sub}</p>}
               </div>
             </div>
           ))}
@@ -128,11 +128,7 @@ export default function EventDetails() {
             <div className="mt-8 bg-white rounded-xl p-6 shadow-sm">
               <h4 className="font-semibold text-gray-900 mb-2">Ticket Price</h4>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-bold text-primary">&#8377;999</span>
-                <span className="text-gray-500 line-through">&#8377;1,499</span>
-                <span className="text-sm bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-medium">
-                  Early Bird
-                </span>
+                <span className="text-3xl font-bold text-primary">$25</span>
               </div>
               <p className="text-sm text-gray-500 mt-2">
                 Includes welcome drinks, snacks, and all event activities
