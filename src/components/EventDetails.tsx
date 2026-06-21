@@ -56,10 +56,10 @@ const ageGroups = [
 
 export default function EventDetails() {
   return (
-    <section id="details" className="py-20 sm:py-24 bg-surface">
+    <section id="details" className="py-20 sm:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-forest mb-4">
             Event Details
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -71,9 +71,9 @@ export default function EventDetails() {
           {details.map((item) => (
             <div
               key={item.title}
-              className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm"
+              className="flex items-start gap-4 bg-sky p-6 rounded-xl shadow-sm"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/60 text-forest flex items-center justify-center">
                 {item.icon}
               </div>
               <div>
@@ -87,14 +87,14 @@ export default function EventDetails() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Event Schedule</h3>
+            <h3 className="text-2xl font-bold text-forest mb-6">Event Schedule</h3>
             <div className="space-y-4">
               {schedule.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-20 text-sm font-semibold text-primary">
+                  <div className="flex-shrink-0 w-20 text-sm font-semibold text-forest">
                     {item.time}
                   </div>
-                  <div className="flex-1 bg-white rounded-lg px-4 py-3 shadow-sm">
+                  <div className="flex-1 bg-sky rounded-lg px-4 py-3 shadow-sm">
                     <span className="text-gray-800">{item.event}</span>
                   </div>
                 </div>
@@ -103,14 +103,14 @@ export default function EventDetails() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Age Categories</h3>
+            <h3 className="text-2xl font-bold text-forest mb-6">Age Categories</h3>
             <div className="space-y-4">
               {ageGroups.map((group) => (
                 <div
                   key={group.range}
-                  className="bg-white rounded-xl p-5 shadow-sm flex items-center gap-4"
+                  className="bg-sky rounded-xl p-5 shadow-sm flex items-center gap-4"
                 >
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-pink-400 flex items-center justify-center text-white font-bold text-sm">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-forest to-forest-light flex items-center justify-center text-white font-bold text-sm">
                     {group.range}
                   </div>
                   <div>
@@ -121,13 +121,13 @@ export default function EventDetails() {
               ))}
             </div>
 
-            <div className="mt-8 bg-white rounded-xl p-6 shadow-sm">
-              <h4 className="font-semibold text-gray-900 mb-2">Ticket Price</h4>
+            <div className="mt-8 bg-sky rounded-xl p-6 shadow-sm">
+              <h4 className="font-semibold text-forest mb-2">Ticket Price</h4>
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-bold text-primary">$25</span>
               </div>
               <p className="text-sm text-gray-500 mt-2">
-                Includes welcome drinks, snacks, and all event activities
+                Includes dinner, drinks, and activities
               </p>
             </div>
           </div>

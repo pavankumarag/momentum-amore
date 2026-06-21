@@ -52,11 +52,11 @@ export default function RegistrationForm() {
 
   if (submitted) {
     return (
-      <section id="register" className="py-20 sm:py-24 bg-gradient-to-br from-primary-dark to-primary">
+      <section id="register" className="py-20 sm:py-24 bg-background">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <div className="bg-white rounded-2xl p-10 shadow-xl">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -72,20 +72,20 @@ export default function RegistrationForm() {
   }
 
   return (
-    <section id="register" className="py-20 sm:py-24 bg-gradient-to-br from-primary-dark to-primary">
+    <section id="register" className="py-20 sm:py-24 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-forest mb-4">
             Register Now
           </h2>
-          <p className="text-pink-200 text-lg">
+          <p className="text-gray-600 text-lg">
             Secure your spot at the next Momentum Amore event.
           </p>
         </div>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white rounded-2xl p-6 sm:p-10 shadow-xl space-y-6"
+          className="bg-sky-light rounded-2xl p-6 sm:p-10 shadow-xl space-y-6"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
@@ -95,7 +95,7 @@ export default function RegistrationForm() {
               <input
                 type="text"
                 {...register("fullName", { required: "Full name is required" })}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
                 placeholder="Your full name"
               />
               {errors.fullName && (
@@ -114,7 +114,7 @@ export default function RegistrationForm() {
                   min: { value: 21, message: "Must be at least 21" },
                   max: { value: 55, message: "Must be 55 or under" },
                 })}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
                 placeholder="Your age"
               />
               {errors.age && (
@@ -128,7 +128,7 @@ export default function RegistrationForm() {
               </label>
               <select
                 {...register("gender", { required: "Please select your gender" })}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
               >
                 <option value="">Select gender</option>
                 <option value="male">Male</option>
@@ -146,7 +146,7 @@ export default function RegistrationForm() {
               <input
                 type="text"
                 {...register("profession", { required: "Profession is required" })}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
                 placeholder="e.g. Software Engineer"
               />
               {errors.profession && (
@@ -164,7 +164,7 @@ export default function RegistrationForm() {
                   required: "Phone number is required",
                   pattern: { value: /^[6-9]\d{9}$/, message: "Enter a valid 10-digit number" },
                 })}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
                 placeholder="10-digit number"
               />
               {errors.phone && (
@@ -182,7 +182,7 @@ export default function RegistrationForm() {
                   required: "Email is required",
                   pattern: { value: /^\S+@\S+\.\S+$/, message: "Enter a valid email" },
                 })}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
                 placeholder="you@email.com"
               />
               {errors.email && (
@@ -197,7 +197,7 @@ export default function RegistrationForm() {
               <input
                 type="text"
                 {...register("city", { required: "City is required" })}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
                 placeholder="Your city"
               />
               {errors.city && (
@@ -212,7 +212,7 @@ export default function RegistrationForm() {
               <input
                 type="text"
                 {...register("instagram")}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
                 placeholder="@yourhandle"
               />
             </div>
@@ -250,7 +250,7 @@ export default function RegistrationForm() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Describe your favorite 1st date *
+              Describe your perfect first date *
             </label>
             <textarea
               {...register("firstDate", { required: "This field is required" })}
@@ -265,12 +265,12 @@ export default function RegistrationForm() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Describe yourself in 3 words *
+              Describe yourself in three words *
             </label>
             <input
               type="text"
               {...register("threeWords", { required: "This field is required" })}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
               placeholder="e.g. Adventurous, Caring, Funny"
             />
             {errors.threeWords && (
@@ -284,7 +284,7 @@ export default function RegistrationForm() {
             </label>
             <select
               {...register("loveAtFirstSight", { required: "Please select an option" })}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
             >
               <option value="">Select...</option>
               <option value="yes">Yes</option>
@@ -301,7 +301,7 @@ export default function RegistrationForm() {
             </label>
             <select
               {...register("relationshipGoal", { required: "Please select an option" })}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
             >
               <option value="">Select...</option>
               <option value="serious">Serious relationship</option>

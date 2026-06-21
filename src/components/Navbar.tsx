@@ -15,11 +15,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-forest shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-2xl font-bold text-white">
-            Momentum<span className="text-white/80">Amore</span>
+            Momentum<span className="text-white">Amore</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
@@ -34,7 +34,7 @@ export default function Navbar() {
             ))}
             <a
               href="#register"
-              className="px-5 py-2 bg-white text-primary rounded-full text-sm font-semibold hover:bg-white/90 transition-colors"
+              className="px-5 py-2 bg-primary text-white rounded-full text-sm font-semibold hover:bg-primary-dark transition-colors"
             >
               Register Now
             </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-primary border-t border-white/20 px-4 pb-4">
+        <div className="md:hidden bg-forest border-t border-white/20 px-4 pb-4">
           {navLinks.map((link) => (
             <a
               key={link.href}

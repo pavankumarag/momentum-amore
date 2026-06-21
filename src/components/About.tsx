@@ -39,10 +39,10 @@ const features = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 sm:py-24 bg-white">
+    <section id="about" className="py-20 sm:py-24 bg-sky-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-forest mb-4">
             About the Event
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -55,9 +55,9 @@ export default function About() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="text-center p-6 rounded-2xl bg-surface hover:shadow-lg transition-shadow"
+              className="text-center p-6 rounded-2xl bg-sky hover:shadow-lg transition-shadow"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-4">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white/60 text-forest mb-4">
                 {feature.icon}
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>

@@ -47,13 +47,13 @@ export default function Hero() {
   const eventDate = new Date("2026-08-02T18:00:00");
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-white">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-background">
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
         <div className="flex justify-center mb-6">
-          <Image src="/images/logo.png" alt="Momentum Amore" width={320} height={320} className="w-64 sm:w-80 md:w-96 h-auto" />
+          <Image src="/images/logo.jpg" alt="Momentum Amore" width={320} height={320} className="w-64 sm:w-80 md:w-96 h-auto" />
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-primary mb-4 animate-fade-in-up">
-          Momentum<span className="text-accent">Amore</span>
+          Momentum<span className="text-primary">Amore</span>
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-2 font-light">
           Where Sparks Meet Momentum
@@ -83,7 +83,7 @@ export default function Hero() {
           </a>
           <a
             href="#how-it-works"
-            className="px-8 py-4 bg-white text-primary border border-primary rounded-full text-lg font-medium hover:bg-primary/10 transition-all"
+            className="px-8 py-4 bg-background text-primary border border-primary rounded-full text-lg font-medium hover:bg-primary/10 transition-all"
           >
             How It Works
           </a>

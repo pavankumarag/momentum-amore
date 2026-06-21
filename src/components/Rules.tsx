@@ -57,10 +57,10 @@ const rules = [
 
 export default function Rules() {
   return (
-    <section id="rules" className="py-20 sm:py-24 bg-surface">
+    <section id="rules" className="py-20 sm:py-24 bg-sky-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-forest mb-4">
             Rules & Safety
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -72,9 +72,9 @@ export default function Rules() {
           {rules.map((rule) => (
             <div
               key={rule.title}
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-sky rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="w-10 h-10 rounded-full bg-red-50 text-primary flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-full bg-white/60 text-forest flex items-center justify-center mb-4">
                 {rule.icon}
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">{rule.title}</h3>
