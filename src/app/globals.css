@@ -3,18 +3,18 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #be185d;
-  --color-primary-light: #f9a8d4;
-  --color-primary-dark: #831843;
-  --color-accent: #fbbf24;
-  --color-surface: #fff1f2;
-  --color-surface-dark: #1a0a0e;
+  --color-primary: #c2410c;
+  --color-primary-light: #fdba74;
+  --color-primary-dark: #7c2d12;
+  --color-accent: #ef4444;
+  --color-surface: #fff7ed;
+  --color-surface-dark: #1a0a00;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 :root {
-  --background: #fffbfb;
+  --background: #ffffff;
   --foreground: #1a1a2e;
 }
 
@@ -45,10 +45,10 @@ body {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(190, 24, 93, 0.3);
+    box-shadow: 0 0 20px rgba(194, 65, 12, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(190, 24, 93, 0.6);
+    box-shadow: 0 0 40px rgba(194, 65, 12, 0.6);
   }
 }
 

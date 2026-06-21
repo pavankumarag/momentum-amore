@@ -13,7 +13,11 @@ interface FormData {
   city: string;
   interests: string;
   instagram: string;
-  relationshipStatus: string;
+  lookingFor: string;
+  firstDate: string;
+  threeWords: string;
+  loveAtFirstSight: string;
+  relationshipGoal: string;
   consent: boolean;
 }
 
@@ -129,8 +133,6 @@ export default function RegistrationForm() {
                 <option value="">Select gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
-                <option value="non-binary">Non-Binary</option>
-                <option value="prefer-not-to-say">Prefer not to say</option>
               </select>
               {errors.gender && (
                 <p className="text-red-500 text-xs mt-1">{errors.gender.message}</p>
@@ -233,19 +235,81 @@ export default function RegistrationForm() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Relationship Status *
+              What are you looking for in a match? *
+            </label>
+            <textarea
+              {...register("lookingFor", { required: "This field is required" })}
+              rows={3}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition resize-none"
+              placeholder="Tell us what you're looking for..."
+            />
+            {errors.lookingFor && (
+              <p className="text-red-500 text-xs mt-1">{errors.lookingFor.message}</p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Describe your favorite 1st date *
+            </label>
+            <textarea
+              {...register("firstDate", { required: "This field is required" })}
+              rows={3}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition resize-none"
+              placeholder="Paint us a picture..."
+            />
+            {errors.firstDate && (
+              <p className="text-red-500 text-xs mt-1">{errors.firstDate.message}</p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Describe yourself in 3 words *
+            </label>
+            <input
+              type="text"
+              {...register("threeWords", { required: "This field is required" })}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+              placeholder="e.g. Adventurous, Caring, Funny"
+            />
+            {errors.threeWords && (
+              <p className="text-red-500 text-xs mt-1">{errors.threeWords.message}</p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Do you believe in love at first sight? *
             </label>
             <select
-              {...register("relationshipStatus", { required: "Please confirm your status" })}
+              {...register("loveAtFirstSight", { required: "Please select an option" })}
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
             >
-              <option value="">Select status</option>
-              <option value="single">Single</option>
-              <option value="divorced">Divorced</option>
-              <option value="separated">Separated</option>
+              <option value="">Select...</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
             </select>
-            {errors.relationshipStatus && (
-              <p className="text-red-500 text-xs mt-1">{errors.relationshipStatus.message}</p>
+            {errors.loveAtFirstSight && (
+              <p className="text-red-500 text-xs mt-1">{errors.loveAtFirstSight.message}</p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Are you looking for a serious relationship or casual dating? *
+            </label>
+            <select
+              {...register("relationshipGoal", { required: "Please select an option" })}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+            >
+              <option value="">Select...</option>
+              <option value="serious">Serious relationship</option>
+              <option value="casual">Casual dating</option>
+              <option value="open">Open to either</option>
+            </select>
+            {errors.relationshipGoal && (
+              <p className="text-red-500 text-xs mt-1">{errors.relationshipGoal.message}</p>
             )}
           </div>
 

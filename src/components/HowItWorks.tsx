@@ -40,7 +40,7 @@ export default function HowItWorks() {
         </div>
 
         <div className="relative">
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-pink-200 -translate-x-1/2" />
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 -translate-x-1/2" />
 
           <div className="space-y-12 lg:space-y-16">
             {steps.map((step, i) => (
@@ -58,7 +58,7 @@ export default function HowItWorks() {
                 </div>
 
                 <div className="relative z-10 flex-shrink-0">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-pink-400 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-lg shadow-lg">
                     {step.number}
                   </div>
                 </div>

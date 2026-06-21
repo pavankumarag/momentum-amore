@@ -17,7 +17,7 @@ const details = [
       </svg>
     ),
     title: "Date & Time",
-    content: "Sunday, August 2 — 6:00 PM to 9:00 PM",
+    content: "Sunday, August 2, 2026 — 6:00 PM to 9:00 PM",
     sub: "",
   },
   {
@@ -43,19 +43,15 @@ const details = [
 ];
 
 const schedule = [
-  { time: "6:00 PM", event: "Doors Open & Welcome Drinks" },
-  { time: "6:20 PM", event: "Introduction & Ice Breakers" },
-  { time: "6:45 PM", event: "Speed Dating Rounds Begin" },
-  { time: "7:45 PM", event: "Networking Break & Refreshments" },
-  { time: "8:15 PM", event: "Final Rounds & Fun Activities" },
-  { time: "8:45 PM", event: "Match Selection & Wrap Up" },
+  { time: "6:00 PM", event: "Doors Open" },
+  { time: "7:00 PM", event: "Speed Dating Rounds Begin" },
+  { time: "8:00 PM", event: "Food Served" },
+  { time: "8:30 PM", event: "Final Connections" },
   { time: "9:00 PM", event: "Event Ends" },
 ];
 
 const ageGroups = [
-  { range: "23–28", label: "Young Professionals" },
-  { range: "29–35", label: "Established Professionals" },
-  { range: "36–45", label: "Experienced Singles" },
+  { range: "18–29", label: "Open to all singles aged 18–29" },
 ];
 
 export default function EventDetails() {
