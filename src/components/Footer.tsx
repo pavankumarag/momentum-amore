@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white">
-          <p>&copy; {new Date().getFullYear()} Momentum Amore. All rights reserved.</p>
+          <p>&copy; 2026 Momentum Amore. All rights reserved.</p>
         </div>
       </div>
     </footer>

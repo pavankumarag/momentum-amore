@@ -15,9 +15,10 @@ function getTimeLeft(targetDate: Date) {
 }
 
 function CountdownTimer({ targetDate }: { targetDate: Date }) {
-  const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(targetDate));
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
+    setTimeLeft(getTimeLeft(targetDate));
     const timer = setInterval(() => {
       const next = getTimeLeft(targetDate);
       setTimeLeft(next);
